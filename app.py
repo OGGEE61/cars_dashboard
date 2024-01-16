@@ -5,10 +5,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Updated cache command
+
 @st.cache_resource
 def load_data():
     # Load your dataset here
-    data = pd.read_csv('Cleaned_Car_sale_ads2.csv')
+    data = pd.read_csv('Cleaned_Car_sale_ads3.csv')
     # Data cleaning and preprocessing steps
     return data
 
@@ -105,6 +106,7 @@ corr = filtered_data[columns_to_include].corr()
 fig, ax = plt.subplots()
 sns.heatmap(corr, annot=True, fmt=".2f")
 st.pyplot(fig)
+
 
 # Data Table
 st.header('Data Table')
